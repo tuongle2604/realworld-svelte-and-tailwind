@@ -1,6 +1,7 @@
-
 <script>
-  import BaseLink from "../commons/BaseLink";
+  import BaseLink from "../BaseLink";
+  import Container from "@/components/Container";
+
   let menu = [
     {
       label: "Home",
@@ -8,31 +9,33 @@
     },
     {
       label: "Sign in",
-      href: "/signin"
+      href: "/signin",
     },
     {
       label: "Sign up",
-      href: "/signup"
-    }
+      href: "/signup",
+    },
   ];
 </script>
 
-<header class="xl:container mx-auto p-4 flex justify-between">
-  <BaseLink href="/" className="text-2xl font-primary tet-pxrimary visited:text-primary hover:no-underline">
+<Container class="flex justify-between">
+  <BaseLink
+    href="/"
+    class="text-2xl font-primary text-primary hover:no-underline visited:text-primary"
+  >
     Conduit
   </BaseLink>
 
   <ul class="flex">
     {#each menu as item}
-		<li>
-      <BaseLink className="inline-flex p-2 tet-pxrimary visited:text-primary hover:text-primary" href={item.href}>
-        {item.label}
-      </BaseLink>
-    </li>
-	{/each}
+      <li class="">
+        <BaseLink
+          class="inline-flex p-2 text-default hover:text-primary visited:text-default"
+          href={item.href}
+        >
+          {item.label}
+        </BaseLink>
+      </li>
+    {/each}
   </ul>
-</header>
-
-<style>
-
-</style>
+</Container>

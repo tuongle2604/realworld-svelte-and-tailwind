@@ -5,6 +5,8 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import sveltePreprocess from 'svelte-preprocess'
+import alias from '@rollup/plugin-alias';
+import path from "path";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -38,6 +40,11 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		alias({
+			entries: [
+				{ find: '@', replacement: path.resolve(__dirname, './src') },
+			]
+		}),
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production
@@ -62,7 +69,7 @@ export default {
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
-			extensions: ['.js', '.svelte']
+			extensions: ['.js', '.ts','.svelte']
 		}),
 		commonjs(),
 

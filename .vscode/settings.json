@@ -19,4 +19,8 @@
   "eslint.format.enable": true,
   "eslint.quiet": false,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "css.customData": [".vscode/css_custom_data.json"],
+  "[svelte]": {
+     "editor.defaultFormatter": "svelte.svelte-vscode"
+   }
 }
