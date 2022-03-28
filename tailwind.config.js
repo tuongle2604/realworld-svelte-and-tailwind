@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: ['./public/index.html', './src/**/*.svelte'],
   theme: {
@@ -9,6 +11,7 @@ module.exports = {
       "primary": ["titillium web","sans-serif"],
     },
     colors: {
+      ...colors,
       primary: "#5cb85c",
       secondary: "#bbb",
       default: "#373a3c",
