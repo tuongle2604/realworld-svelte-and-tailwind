@@ -2,7 +2,8 @@
   import { Router, Link, Route } from "svelte-routing";
   import HomePage from "../pages/HomePage";
   import ArticlePage from "../pages/ArticlePage";
-  import SignIn from "../pages/SignIn";
+  import LoginPage from "../pages/LoginPage";
+  import RegisterPage from "src/pages/RegisterPage";
   import NotFound from "../pages/NotFound";
 </script>
 
@@ -10,8 +11,11 @@
   <Route path="/">
     <HomePage />
   </Route>
-  <Route path="/signin">
-    <SignIn />
+  <Route path="login">
+    <LoginPage />
   </Route>
-  <Route path="/article" component={ArticlePage} />
+  <Route path="register">
+    <RegisterPage />
+  </Route>
+  <Route path="article" component={ArticlePage} />
 </Router>

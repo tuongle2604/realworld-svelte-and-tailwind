@@ -24,7 +24,9 @@
   <p class="text-2xl font-bold">{article.title}</p>
   <p class="text-secondary mb-4">{article.description}</p>
   <div class="flex items-baseline">
-    <BaseLink class="text-secondary text-sm mr-auto basis-[80px] shrink-0">
+    <BaseLink
+      class="text-secondary visited:text-secondary text-sm mr-auto basis-[80px] shrink-0"
+    >
       Read more...
     </BaseLink>
 

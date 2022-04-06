@@ -9,11 +9,11 @@
     },
     {
       label: "Sign in",
-      href: "/signin",
+      href: "/login",
     },
     {
       label: "Sign up",
-      href: "/signup",
+      href: "/register",
     },
   ];
 </script>

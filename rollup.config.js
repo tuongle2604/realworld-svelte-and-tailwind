@@ -20,7 +20,7 @@ function serve() {
 	return {
 		writeBundle() {
 			if (server) return;
-			server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+			server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev', "--single"], {
 				stdio: ['ignore', 'inherit', 'inherit'],
 				shell: true
 			});
@@ -43,9 +43,11 @@ export default {
 		alias({
 			entries: [
 				{ find: '@', replacement: path.resolve(__dirname, './src') },
+				{ find: /^src/, replacement: path.resolve(__dirname, './src') },
 			]
 		}),
 		svelte({
+			exclude: ["./node_modules"],
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production

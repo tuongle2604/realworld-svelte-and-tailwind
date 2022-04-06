@@ -7,7 +7,7 @@
   <p class="mb-2">Popular Tags</p>
   <div>
     {#each tags as tag}
-      <Tag on:click={() => console.log(123)}>{tag}</Tag>
+      <Tag on:click={() => console.log("tag clicked")}>{tag}</Tag>
     {/each}
   </div>
 </div>

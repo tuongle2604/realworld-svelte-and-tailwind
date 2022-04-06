@@ -1,5 +1,5 @@
 <script>
-  import Container from "@/components/Container";
+  import DefaultLayout from "@/layout/Default";
   import SideBar from "./SideBar";
   import ArticleList from "./ArticleList";
   import FeedToggle from "./FeedToggle";
@@ -65,7 +65,7 @@
   };
 </script>
 
-<Container class="mt-8">
+<DefaultLayout>
   <div class="flex">
     <div class="basis-3/4 px-4">
       <FeedToggle />
@@ -75,4 +75,4 @@
       <SideBar {tags} />
     </div>
   </div>
-</Container>
+</DefaultLayout>

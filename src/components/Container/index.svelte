@@ -1,7 +1,7 @@
 <script>
   let className;
   export { className as class };
-  $: containerClass = "xl:container mx-auto p-4 " + className;
+  $: containerClass = "container max-w-6xl mx-auto px-5 py-3 " + className;
 </script>
 
 <div class={containerClass}>
